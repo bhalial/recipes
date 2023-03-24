@@ -261,7 +261,7 @@ export default function Home({ recipes }) {
       <Container className="mt-9">
         <div className="max-w-4xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I&apos;m Leonie McPherson, vegan food blogger and recipe developer.
+            I&apos;m Leonie McPherson, vegan food enthusiast and recipe developer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Welcome to my website where I share my vegan recipes and tips for a healthy lifestyle.
