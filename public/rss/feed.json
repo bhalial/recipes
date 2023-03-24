@@ -1,0 +1,34 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Leonie McPherson",
+    "feed_url": "undefined/rss/feed.json",
+    "description": "Your blog description",
+    "icon": "undefined/favicon.ico",
+    "author": {
+        "name": "Leonie McPherson"
+    },
+    "items": [
+        {
+            "id": "undefined/recipes/arabic-lentil-soup",
+            "content_html": "",
+            "url": "undefined/recipes/arabic-lentil-soup",
+            "title": "Delicious Vegan Lentil Soup",
+            "summary": "How to make soup",
+            "date_modified": "2024-11-12T00:00:00.000Z",
+            "author": {
+                "name": "Leonie McPherson"
+            }
+        },
+        {
+            "id": "undefined/recipes/pancakes",
+            "content_html": "",
+            "url": "undefined/recipes/pancakes",
+            "title": "Vegan Pancakes",
+            "summary": "Vegan pancakes that will make you crave for more!",
+            "date_modified": "2023-01-03T00:00:00.000Z",
+            "author": {
+                "name": "Leonie McPherson"
+            }
+        }
+    ]
+}

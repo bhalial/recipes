@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Leonie McPherson</title>
+        <link>undefined</link>
+        <description>Your blog description</description>
+        <lastBuildDate>Fri, 24 Mar 2023 22:39:31 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>Leonie McPherson</title>
+            <url>undefined/favicon.ico</url>
+            <link>undefined</link>
+        </image>
+        <copyright>All rights reserved 2023</copyright>
+        <item>
+            <title><![CDATA[Delicious Vegan Lentil Soup]]></title>
+            <link>undefined/recipes/arabic-lentil-soup</link>
+            <guid>undefined/recipes/arabic-lentil-soup</guid>
+            <pubDate>Tue, 12 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to make soup]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vegan Pancakes]]></title>
+            <link>undefined/recipes/pancakes</link>
+            <guid>undefined/recipes/pancakes</guid>
+            <pubDate>Tue, 03 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Vegan pancakes that will make you crave for more!]]></description>
+        </item>
+    </channel>
+</rss>
