@@ -44,7 +44,7 @@ export default function About() {
         <title>About - Leonie McPherson</title>
         <meta
           name="description"
-          content="I'm Leonie McPherson"
+          content="I&apos;m Leonie McPherson"
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -65,7 +65,7 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Living in the Netherlands and originally from South Africa. I've been vegan for a while and I love creating vegan recipes.
+                Living in the Netherlands and originally from South Africa. I&apos;ve been vegan for a while and I love creating vegan recipes.
               </p>
             </div>
           </div>
