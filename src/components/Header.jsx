@@ -235,7 +235,6 @@ function Avatar({ large = false, className, ...props }) {
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
-      <span className="text-2xl flex items-center justify-center align-center bg-stone-800 rounded-full w-10 h-10 mr-2">🌱</span>
       <Image
         src={avatarImage}
         alt=""

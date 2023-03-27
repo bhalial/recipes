@@ -1,18 +1,17 @@
 import { RecipeLayout } from '../../../components/RecipeLayout'
 import Image from 'next/image'
-import SoupPhoto from '../../../images/photos/soup.jpg'
+import Photo from '../../../images/photos/soup.jpg'
 
 export const meta = {
   author: 'Leonie McPherson',
   date: '2024-11-12',
   title: 'Delicious Vegan Lentil Soup',
-  description:
-    'How to make soup',
+  description: 'How to make soup',
 }
 
 export default (props) => <RecipeLayout meta={meta} {...props} />
 
-<Image src={SoupPhoto} alt="" />
+<Image src={Photo} alt="" />
 
 Ingredients:
 
