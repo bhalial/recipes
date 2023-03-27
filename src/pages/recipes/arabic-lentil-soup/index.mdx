@@ -1,4 +1,6 @@
 import { RecipeLayout } from '../../../components/RecipeLayout'
+import Image from 'next/image'
+import SoupPhoto from '../../../images/photos/soup.jpg'
 
 export const meta = {
   author: 'Leonie McPherson',
@@ -9,6 +11,8 @@ export const meta = {
 }
 
 export default (props) => <RecipeLayout meta={meta} {...props} />
+
+<Image src={SoupPhoto} alt="" />
 
 Ingredients:
 
