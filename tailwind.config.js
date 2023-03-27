@@ -186,11 +186,11 @@ module.exports = {
             listStyleType: 'decimal',
           },
           'ul, ol': {
-            paddingLeft: theme('spacing.6'),
+            paddingLeft: theme('spacing.2'),
           },
           li: {
-            marginTop: theme('spacing.6'),
-            marginBottom: theme('spacing.6'),
+            marginTop: theme('spacing.0'),
+            marginBottom: theme('spacing.0'),
             paddingLeft: theme('spacing[3.5]'),
           },
           'li::marker': {
