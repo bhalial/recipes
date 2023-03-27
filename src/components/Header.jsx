@@ -235,6 +235,7 @@ function Avatar({ large = false, className, ...props }) {
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
+      <span className="text-2xl flex items-center justify-center align-center bg-stone-800 rounded-full w-10 h-10 mr-2">🌱</span>
       <Image
         src={avatarImage}
         alt=""
@@ -266,7 +267,7 @@ export function Header() {
           <Container className="w-full">
           <div className="relative flex gap-4 px-4 rounded-lg py-2 text-lg mt-4 text-zinc-800 dark:text-zinc-200">
               <AvatarContainer>
-                <Avatar />
+                <Avatar className="flex" />
               </AvatarContainer>
               <MobileNavigation className="pointer-events-auto md:hidden" />
               <DesktopNavigation className="pointer-events-auto hidden md:block w-full" />

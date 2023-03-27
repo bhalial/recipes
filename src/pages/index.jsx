@@ -128,7 +128,7 @@ export default function Home({ recipes }) {
     <>
       <Head>
         <title>
-          Leonie McPherson
+        🌱 Soupchute 🌱 Best place for your vegan recipes!
         </title>
         <meta
           name="description"
@@ -141,7 +141,7 @@ export default function Home({ recipes }) {
             I&apos;m Leonie McPherson, vegan food enthusiast and recipe developer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Welcome to my website where I share my vegan recipes and tips for a healthy lifestyle.
+            Welcome to 🌱 Soupchute where I share my vegan recipes and tips for a healthy lifestyle.
           </p>
           <div className="mt-6 flex gap-6 justify-center">
             <SocialLink
