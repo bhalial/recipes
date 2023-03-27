@@ -1,14 +1,18 @@
 import { RecipeLayout } from '../../../components/RecipeLayout'
+import Image from 'next/image'
 
 export const meta = {
   author: 'Leonie McPherson',
-  date: '2023-01-03',
+  date: '2022-10-02',
   title: 'Vegan Pancakes',
   description:
     'Vegan pancakes that will make you crave for more!',
+  image: '/pancake.jpg',
 }
 
 export default (props) => <RecipeLayout meta={meta} {...props} />
+
+<Image className="w-full h-auto" width={500} height={500} src={meta.image} alt="" />
 
 <h2>Ingredients:</h2>
 

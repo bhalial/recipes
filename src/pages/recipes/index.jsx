@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { Card } from '../../components/Card'
 import { SimpleLayout } from '../../components/SimpleLayout'
@@ -7,31 +8,32 @@ import { getAllRecipes } from '../../lib/getAllRecipes'
 
 function Recipe({ recipe }) {
   return (
-    <recipe className="md:grid md:grid-cols-4 md:items-baseline">
-      <Card className="md:col-span-3">
+    <Card className="">
+    <recipe className="flex items-center w-full justify-between">
+      <div className="flex items-center">
+        <div className="mr-4">
+          <Image className="rounded-xl bg-cover bg-center" width={150} height={150} src={recipe.image}></Image>
+        </div>
+        <div>
         <Card.Title href={`/recipes/${recipe.slug}`}>
           {recipe.title}
         </Card.Title>
-        <Card.Eyebrow
-          as="time"
-          dateTime={recipe.date}
-          className="md:hidden"
-          decorate
-        >
-            {formatDate(recipe.date)}
-        </Card.Eyebrow>
         <Card.Description>{recipe.description}</Card.Description>
-        <Card.Cta>Read recipe</Card.Cta>
-      </Card>
-      <Card.Eyebrow
+        <Card.Eyebrow
         as="time"
         dateTime={recipe.date}
-        className="mt-1 hidden md:block"
-      >
+        className="mt-1"
+        >
           {recipe.author} <br />
           {formatDate(recipe.date)}
-      </Card.Eyebrow>
+        </Card.Eyebrow>
+        </div>
+      </div>
+      <div className="flex">
+      <Card.Cta>Read recipe</Card.Cta>
+      </div>
     </recipe>
+    </Card>
   )
 }
 

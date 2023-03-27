@@ -15,14 +15,21 @@ import { getAllRecipes } from '../lib/getAllRecipes'
 function Recipe({ recipe }) {
   return (
     <Card as="recipe">
-      <Card.Title href={`/recipes/${recipe.slug}`}>
-        {recipe.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={recipe.date} decorate>
-        {recipe.author} &middot; {formatDate(recipe.date)}
-      </Card.Eyebrow>
-      <Card.Description>{recipe.description}</Card.Description>
-      <Card.Cta>Read recipe</Card.Cta>
+      <div className="flex items-center">
+        <div className="py-2 px-4">
+          <Image className="rounded-xl" width={150} height={150} src={recipe.image}></Image>
+        </div>
+        <div>
+        <Card.Title href={`/recipes/${recipe.slug}`}>
+          {recipe.title}
+        </Card.Title>
+        <Card.Eyebrow as="time" dateTime={recipe.date} decorate>
+          {recipe.author} &middot; {formatDate(recipe.date)}
+        </Card.Eyebrow>
+        <Card.Description>{recipe.description}</Card.Description>
+        <Card.Cta>Read recipe</Card.Cta>
+        </div>
+      </div>
     </Card>
   )
 }
