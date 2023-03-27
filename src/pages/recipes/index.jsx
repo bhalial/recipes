@@ -8,31 +8,27 @@ import { getAllRecipes } from '../../lib/getAllRecipes'
 
 function Recipe({ recipe }) {
   return (
-    <Card className="">
-    <recipe className="flex items-center w-full justify-between">
-      <div className="flex items-center">
-        <div className="mr-4">
-          <Image className="rounded-xl bg-cover bg-center" width={150} height={150} src={recipe.image}></Image>
+    <Card>
+      <recipe className="w-full">
+        <div>
+          <Image className="rounded-xl w-full aspect-ratio aspect-video bg-cover" width={150} height={150} src={recipe.image}></Image>
         </div>
         <div>
-        <Card.Title href={`/recipes/${recipe.slug}`}>
-          {recipe.title}
-        </Card.Title>
-        <Card.Description>{recipe.description}</Card.Description>
-        <Card.Eyebrow
-        as="time"
-        dateTime={recipe.date}
-        className="mt-1"
-        >
-          {recipe.author} <br />
-          {formatDate(recipe.date)}
-        </Card.Eyebrow>
+          <Card.Title href={`/recipes/${recipe.slug}`}>
+            {recipe.title}
+          </Card.Title>
+          <Card.Description>{recipe.description}</Card.Description>
+          <Card.Eyebrow
+          as="time"
+          dateTime={recipe.date}
+          className="mt-1"
+          >
+            {recipe.author} <br />
+            {formatDate(recipe.date)}
+          </Card.Eyebrow>
+          <Card.Cta>Read recipe</Card.Cta>
         </div>
-      </div>
-      <div className="flex">
-      <Card.Cta>Read recipe</Card.Cta>
-      </div>
-    </recipe>
+      </recipe>
     </Card>
   )
 }
@@ -51,8 +47,8 @@ export default function RecipesIndex({ recipes }) {
         title="Making vegan recipes easy and fun!"
         intro="All of my vegan recipes that I either thought of myself or adjusted from other sources."
       >
-        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <div className="flex flex-col space-y-16">
+        <div className="md:border-l md:border-zinc-100 md:dark:border-zinc-700/40">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4">
             {recipes.map((recipe) => (
               <Recipe key={recipe.slug} recipe={recipe} />
             ))}
