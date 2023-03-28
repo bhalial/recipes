@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import clsx from 'clsx'
 
 import { Card } from '../components/Card'
 import { Container } from '../components/Container'
@@ -36,23 +35,35 @@ function Recipe({ recipe }) {
 }
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
   return (
-    <div className="mt-16">
-      <div className="justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-          <Splide
-              options={ {
-                  type        : 'loop',
+    <div className="mt-16 flex justify-center">
+      <div className="justify-center max-w-7xl gap-2 overflow-hidden sm:gap-4 w-full mx-4">
+          <Splide options={{
+                  type        : 'slide',
+                  perPage     : 5,
+                  mediaQuery  : 'min',
+                  breakpoints : {
+                    320: {
+                        perPage: 2,
+                    },
+                    640: {
+                        perPage: 3,
+                    },
+                    1024: {
+                        perPage: 4,
+                    },
+                    1280: {
+                        perPage: 5,
+                    }
+                  },
                   rewind      : true,
                   gap         : '2rem',
+                  width       : '100%',
                   pagination  : false,
-                  fixedWidth  : '18rem',
                   cover       : true,
                   focus       : 'center',
                   overflow    : 'visible',
-              } }
-          >
+              }}>
               <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 rotate-2">
                   <Image className="absolute inset-0 h-full w-full object-cover" src={image1} alt="Image 1"/>
               </SplideSlide>
@@ -70,6 +81,7 @@ function Photos() {
               </SplideSlide>
           </Splide>
       </div>
+
     </div>
   )
 }
