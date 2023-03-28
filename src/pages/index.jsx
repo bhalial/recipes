@@ -95,7 +95,7 @@ export default function Home({ recipes }) {
         </title>
         <meta
           name="description"
-          content="I’m Leonie"
+          content="Soupchute.com is a vegan recipe blog. Here you can find the best vegan recipes."
         />
       </Head>
       <Container className="mt-12">
