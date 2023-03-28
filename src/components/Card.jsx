@@ -29,7 +29,7 @@ Card.Link = function CardLink({ children, ...props }) {
     <>
       <div className="absolute inset-0 z-0 scale-100 bg-zinc-50 opacity-0 transition group-hover:opacity-100 dark:bg-zinc-800/50 sm:rounded-2xl" />
       <Link {...props}>
-        <span className="absolute inset-0 sm:rounded-2xl" />
+        <span className="absolute inset-0 z-20 sm:rounded-2xl" />
         <span className="relative z-40">{children}</span>
       </Link>
     </>
@@ -38,7 +38,7 @@ Card.Link = function CardLink({ children, ...props }) {
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 z-20">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
