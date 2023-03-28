@@ -27,7 +27,7 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute inset-0 z-0 scale-100 bg-zinc-50 opacity-0 transition group-hover:opacity-100 dark:bg-zinc-800/50 sm:rounded-2xl" />
+      <div className="absolute -inset-2 z-0 scale-100 bg-lime-50/50 opacity-0 transition group-hover:opacity-100 dark:bg-lime-800/20 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute inset-0 z-20 sm:rounded-2xl" />
         <span className="relative z-40">{children}</span>

@@ -9,11 +9,11 @@ import { getAllRecipes } from '../../lib/getAllRecipes'
 function Recipe({ recipe }) {
   return (
     <Card>
-      <recipe className="w-full">
+      <recipe className="w-full mb-2">
         <div>
           <Image className="rounded-xl w-full aspect-video object-cover" width={150} height={150} src={recipe.image}></Image>
         </div>
-        <div>
+        <div className="mt-2">
           <Card.Title href={`/recipes/${recipe.slug}`}>
             {recipe.title}
           </Card.Title>
@@ -47,7 +47,7 @@ export default function RecipesIndex({ recipes }) {
         title="Making vegan recipes easy and fun!"
         intro="All of my vegan recipes that I either thought of myself or adjusted from other sources."
       >
-        <div className="md:border-l md:border-zinc-100 md:dark:border-zinc-700/40">
+        <div>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4">
             {recipes.map((recipe) => (
               <Recipe key={recipe.slug} recipe={recipe} />
