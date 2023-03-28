@@ -33,7 +33,7 @@ export function RecipeLayout({
   return (
     <>
       <Head>
-        <title>{`${meta.title} - Spencer Sharp`}</title>
+        <title>{`${meta.title} - SoupChute.com`}</title>
         <meta name="description" content={meta.description} />
       </Head>
       <Container className="mt-4">
