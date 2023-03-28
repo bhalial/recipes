@@ -109,9 +109,9 @@ export default function Home({ recipes }) {
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-12 md:mt-16">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-8">
             {recipes.map((recipe) => (
               <Recipe key={recipe.slug} recipe={recipe} />
             ))}

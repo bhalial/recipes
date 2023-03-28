@@ -115,9 +115,7 @@ function MobileNavigation(props) {
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                Navigation
-              </h2>
+              <Avatar className="flex" />
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
@@ -163,7 +161,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex w-full justify-between">
+      <ul className="flex w-full justify-between rounded-lg">
         <ul className="flex">
           <NavItem href="/about">About</NavItem>
           <NavItem href="/recipes">Recipes</NavItem>
@@ -215,18 +213,6 @@ function ModeToggle() {
   )
 }
 
-function AvatarContainer({ className, ...props }) {
-  return (
-    <div
-      className={clsx(
-        className,
-        ''
-      )}
-      {...props}
-    />
-  )
-}
-
 function Avatar({ large = false, className, ...props }) {
   return (
     <Link
@@ -237,7 +223,7 @@ function Avatar({ large = false, className, ...props }) {
     >
       <Image
         src={avatarImage}
-        alt=""
+        alt="Soupchute logo"
         className={clsx(
           'h-auto max-w-[200px]'
         )}
@@ -259,15 +245,10 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
-        <div
-          ref={headerRef}
-          className=""
-        >
+        <div ref={headerRef}>
           <Container className="w-full">
-          <div className="relative flex gap-4 px-4 rounded-lg py-2 text-lg mt-4 text-zinc-800 dark:text-zinc-200">
-              <AvatarContainer>
-                <Avatar className="flex" />
-              </AvatarContainer>
+          <div className="relative flex justify-between bg-stone-800/50 gap-4 px-4 rounded-lg py-2 text-lg mt-4 text-zinc-800 dark:text-zinc-200">
+              <Avatar className="grid items-center" />
               <MobileNavigation className="pointer-events-auto md:hidden" />
               <DesktopNavigation className="pointer-events-auto hidden md:block w-full" />
           </div>
