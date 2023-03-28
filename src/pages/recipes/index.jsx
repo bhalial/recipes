@@ -11,7 +11,7 @@ function Recipe({ recipe }) {
     <Card>
       <recipe className="w-full">
         <div>
-          <Image className="rounded-xl w-full aspect-ratio aspect-video bg-cover" width={150} height={150} src={recipe.image}></Image>
+          <Image className="rounded-xl w-full aspect-video object-cover" width={150} height={150} src={recipe.image}></Image>
         </div>
         <div>
           <Card.Title href={`/recipes/${recipe.slug}`}>

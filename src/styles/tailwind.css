@@ -2,3 +2,5 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+
+@import '@splidejs/splide/dist/css/themes/splide-default.min.css';

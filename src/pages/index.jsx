@@ -11,13 +11,14 @@ import image4 from '../images/photos/soup-2.jpg'
 import image5 from '../images/photos/breakfast.jpg'
 import { formatDate } from '../lib/formatDate'
 import { getAllRecipes } from '../lib/getAllRecipes'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 function Recipe({ recipe }) {
   return (
     <Card as="recipe">
       <div className="flex items-center">
         <div className="py-2 px-4">
-          <Image className="rounded-xl" width={150} height={150} src={recipe.image}></Image>
+          <Image className="rounded-xl aspect-square object-cover" width={150} height={150} src={recipe.image}></Image>
         </div>
         <div>
         <Card.Title href={`/recipes/${recipe.slug}`}>
@@ -39,22 +40,35 @@ function Photos() {
 
   return (
     <div className="mt-16">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72',
-              rotations[imageIndex % rotations.length]
-            )}
+      <div className="justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+          <Splide
+              options={ {
+                  type        : 'loop',
+                  rewind      : true,
+                  gap         : '2rem',
+                  pagination  : false,
+                  fixedWidth  : '18rem',
+                  cover       : true,
+                  focus       : 'center',
+                  overflow    : 'visible',
+              } }
           >
-            <Image
-              src={image}
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+              <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 rotate-2">
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image1} alt="Image 1"/>
+              </SplideSlide>
+              <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 -rotate-2">
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image2} alt="Image 2"/>
+              </SplideSlide>
+              <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 rotate-2">
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image3} alt="Image 2"/>
+              </SplideSlide>
+              <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 -rotate-2">
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image4} alt="Image 2"/>
+              </SplideSlide>
+              <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 rotate-2">
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image5} alt="Image 2"/>
+              </SplideSlide>
+          </Splide>
       </div>
     </div>
   )
@@ -73,11 +87,11 @@ export default function Home({ recipes }) {
         />
       </Head>
       <Container className="mt-12">
-        <div className="max-w-4xl text-center">
+        <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I&apos;m Leonie McPherson, vegan food enthusiast and recipe developer.
+            I&apos;m Leonie McPherson,<br /> vegan food enthusiast and recipe developer.
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
             Welcome to 🌱 Soupchute where I share my vegan recipes.
           </p>
         </div>
