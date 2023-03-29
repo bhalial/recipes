@@ -247,7 +247,7 @@ export function Header() {
       >
         <div ref={headerRef}>
           <Container className="w-full">
-          <div className="relative flex justify-between bg-stone-800/50 gap-4 px-4 rounded-lg py-2 text-lg mt-4 text-zinc-800 dark:text-zinc-200">
+          <div className="relative flex justify-between bg-zinc-200/30 dark:bg-stone-800/50 gap-4 px-4 rounded-lg py-2 text-lg mt-4 text-zinc-800 dark:text-zinc-200">
               <Avatar className="grid items-center" />
               <MobileNavigation className="pointer-events-auto md:hidden" />
               <DesktopNavigation className="pointer-events-auto hidden md:block w-full" />
