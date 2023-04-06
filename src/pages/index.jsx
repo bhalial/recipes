@@ -17,7 +17,7 @@ function Recipe({ recipe }) {
     <Card as="recipe">
       <div className="flex items-center">
         <div className="py-2 px-4">
-          <Image className="rounded-xl aspect-square object-cover" width={150} height={150} src={recipe.image}></Image>
+          <Image className="rounded-xl aspect-square object-cover" width={150} height={150} src={recipe.image} alt={recipe.title}></Image>
         </div>
         <div>
         <Card.Title href={`/recipes/${recipe.slug}`}>
