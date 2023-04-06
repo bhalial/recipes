@@ -66,19 +66,19 @@ function Photos() {
                   overflow    : 'visible',
               }}>
               <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72">
-                  <Image className="absolute inset-0 h-full w-full object-cover" src={image1} alt="Image 1"/>
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image1} alt="lentil soup"/>
               </SplideSlide>
               <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72">
-                  <Image className="absolute inset-0 h-full w-full object-cover" src={image2} alt="Image 2"/>
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image2} alt="breakfast"/>
               </SplideSlide>
               <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72">
-                  <Image className="absolute inset-0 h-full w-full object-cover" src={image3} alt="Image 2"/>
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image3} alt="tacos"/>
               </SplideSlide>
               <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72">
-                  <Image className="absolute inset-0 h-full w-full object-cover" src={image4} alt="Image 2"/>
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image4} alt="potato soup"/>
               </SplideSlide>
               <SplideSlide className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-800 sm:w-72">
-                  <Image className="absolute inset-0 h-full w-full object-cover" src={image5} alt="Image 2"/>
+                  <Image className="absolute inset-0 h-full w-full object-cover" src={image5} alt="hummus toast"/>
               </SplideSlide>
           </Splide>
       </div>
