@@ -52,6 +52,7 @@ export default function Document() {
         />
       </Head>
       <body className="flex h-full flex-col bg-lime-50 dark:bg-stone-900">
+        <div className="bg-[url('../images/food-pattern.png')] bg-repeat fixed inset-0 h-full w-full opacity-30 dark:opacity-10 pointer-events-none"></div>
         <Main />
         <NextScript />
       </body>

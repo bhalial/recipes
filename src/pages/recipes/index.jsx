@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -34,6 +35,21 @@ function Recipe({ recipe }) {
 }
 
 export default function RecipesIndex({ recipes }) {
+  const [filteredRecipes, setFilteredRecipes] = useState(recipes); // State to store filtered recipes
+  const [filter, setFilter] = useState(''); // State to store filter value
+
+  const handleFilterChange = (event) => {
+    const filterValue = event.target.value.toLowerCase();
+    setFilter(filterValue);
+
+    // Filter recipes based on filter value
+    const filtered = recipes.filter((recipe) =>
+      recipe.title.toLowerCase().includes(filterValue) ||
+      recipe.description.toLowerCase().includes(filterValue) // Include description in filter logic
+    );
+
+    setFilteredRecipes(filtered);
+  };
   return (
     <>
       <Head>
@@ -48,11 +64,21 @@ export default function RecipesIndex({ recipes }) {
         intro="All of my vegan recipes that I either thought of myself or adjusted from other sources."
       >
         <div>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4">
-            {recipes.map((recipe) => (
-              <Recipe key={recipe.slug} recipe={recipe} />
-            ))}
-          </div>
+        <input className='w-full px-4 py-2 mb-4 rounded-lg shadow-md dark:bg-stone-700 dark:text-stone-100 placeholder:text-stone-300'
+            type="text"
+            placeholder="Filter recipes ..."
+            value={filter}
+            onChange={handleFilterChange}
+          />
+          {filteredRecipes.length === 0 ? (
+            <p className='dark:text-stone-100'>No results found.</p>
+          ) : (
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4 text-left">
+              {filteredRecipes.map((recipe) => (
+                <Recipe key={recipe.slug} recipe={recipe} />
+              ))}
+            </div>
+          )}
         </div>
       </SimpleLayout>
     </>
