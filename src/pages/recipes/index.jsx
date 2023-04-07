@@ -54,22 +54,14 @@ export default function RecipesIndex({ recipes }) {
     <>
       <Head>
         <title>Recipes - Leonie McPherson</title>
-        <meta
-          name="description"
-          content="Recipes"
-        />
+        <meta name="description" content="Recipes"/>
       </Head>
-      <SimpleLayout
-        title="Making vegan recipes easy and fun!"
-        intro="All of my vegan recipes that I either thought of myself or adjusted from other sources."
-      >
+      <SimpleLayout title="Making vegan recipes easy and fun!" intro="All of my vegan recipes that I either thought of myself or adjusted from other sources.">
         <div>
-        <input className='w-full px-4 py-2 mb-4 rounded-lg shadow-md dark:bg-stone-700 dark:text-stone-100 placeholder:text-stone-300'
-            type="text"
-            placeholder="Filter recipes ..."
-            value={filter}
-            onChange={handleFilterChange}
+          <input type="search" placeholder="Filter recipes ..." value={filter} onChange={handleFilterChange}
+            className='w-full px-4 py-2 mb-4 rounded-lg shadow-md bg-stone-50 text-stone-800 dark:bg-stone-700 focus:outline-none dark:text-stone-100 dark:placeholder:text-stone-300 focus:ring-2 focus:ring-lime-400/40'
           />
+
           {filteredRecipes.length === 0 ? (
             <p className='dark:text-stone-100'>No results found.</p>
           ) : (
